@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackground" >
+
+    <ScrollView
+        android:id="@+id/scroll_body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_limit_battery"
+                style="@style/CustomTitleSetting"
+                android:text="@string/off_when_battery_below" />
+
+            <RelativeLayout
+                android:id="@+id/rl_limit_battery"
+                style="@style/CustomRelativeLayoutSetting" >
+
+                <ImageView
+                    android:id="@+id/icon_limit_battery"
+                    style="@style/CustomImageViewSetting"
+                    android:background="@drawable/ic_battery_36dp" />
+
+                <TextView
+                    android:id="@+id/txt_limit_battery"
+                    style="@style/CustomTextViewSetting"
+                    android:layout_toRightOf="@+id/icon_limit_battery"
+                    android:text="@string/battery_threshold" />
+
+                <TextView
+                    android:id="@+id/on_limit_battery"
+                    style="@style/CustomTextViewSetting_Change_Display"
+                    android:text="30%" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/notification_apps"
+                style="@style/CustomTitleSetting"
+                android:text="@string/notification_for_other_apps" />
+            
+             <RelativeLayout
+                android:id="@+id/rl_notification_apps"
+                style="@style/CustomRelativeLayoutSetting" >
+
+                <ImageView
+                    android:id="@+id/icon_notification_apps"
+                    style="@style/CustomImageViewSetting"
+                    android:background="@drawable/ic_playlist_add_white_36dp"/>
+
+                <TextView
+                    android:id="@+id/txt_notification_apps"
+                    style="@style/CustomTextViewSetting"
+                    android:layout_toRightOf="@+id/icon_notification_apps"
+                    android:text="@string/choose_more_apps"
+                    android:textColor="#ffffff" />
+
+            </RelativeLayout>
+
+            <RelativeLayout 
+                android:id="@+id/set_time"
+                android:layout_width="match_parent" 
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                style="@style/CustomRelativeLayoutSetting">
+                
+                <TextView
+                	android:id="@+id/do_not_disturb"
+                	android:layout_width="wrap_content"
+                	android:layout_height="35dp"
+                	android:layout_centerVertical="true"
+                	android:layout_marginLeft="17dp"
+                	android:layout_marginTop="7dp"
+                	android:gravity="center_vertical"
+                	android:textColor="#6ea51d"
+                	android:textSize="16sp"
+                	android:text="@string/do_not_flash_between" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/switch_set_time"
+                    style="@style/CustomSwitchSetting" />
+                
+            </RelativeLayout>   
+
+            <RelativeLayout
+                android:id="@+id/start_time"
+                style="@style/CustomRelativeLayoutSetting" >
+
+                <ImageView
+                    android:id="@+id/icon_start_time"
+                    style="@style/CustomImageViewSetting"
+                    android:background="@drawable/ic_access_alarm_white_36dp" />
+
+                <TextView
+                    android:id="@+id/txt_start_time"
+                    style="@style/CustomTextViewSetting"
+                    android:layout_toRightOf="@+id/icon_start_time"
+                    android:text="@string/start_time" />
+
+                <TextView
+                    android:id="@+id/start_time_value"
+                    style="@style/CustomTextViewSetting_Change_Display"
+                    android:text="00:00"
+                    android:textSize="22sp" />
+            </RelativeLayout>
+            
+            <View 
+		        style="@style/CustomViewDivider" />
+
+            <RelativeLayout
+                android:id="@+id/end_time"
+                style="@style/CustomRelativeLayoutSetting" >
+
+                <ImageView
+                    android:id="@+id/icon_end_time"
+                    style="@style/CustomImageViewSetting"
+                    android:background="@drawable/ic_access_alarm_white_36dp" />
+
+                <TextView
+                    android:id="@+id/txt_end_time"
+                    style="@style/CustomTextViewSetting"
+                    android:layout_toRightOf="@+id/icon_end_time"
+                    android:text="@string/end_time" />
+
+                <TextView
+                    android:id="@+id/end_time_value"
+                    style="@style/CustomTextViewSetting_Change_Display"
+                    android:text="00:00"
+                    android:textSize="22sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/bottom_ad_banner_setting_adv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/bottom_ad_banner_setting_adv_frag">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

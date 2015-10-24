@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@color/background_fragment"
+    android:orientation="vertical">
+	
+    <TextView
+        android:id="@+id/battery_title"
+      	style="@style/DialogTitle"
+        android:text="@string/battery_percent_threshold"
+         />
+    
+	<RelativeLayout
+	    android:id="@+id/rl_on_length"
+	    style="@style/CustomRelativeLayoutSetting"
+	    android:background="@null" >
+	
+	    <TextView
+	        android:id="@+id/txt_limit_battery"
+	        style="@style/CustomTextViewSetting"
+	        android:text="Choose the threshold" />
+	
+	    <TextView
+	        android:id="@+id/limit_battery_value"
+	        style="@style/CustomTextViewSetting_Change_Display"
+	        android:text="10%" />
+	
+	</RelativeLayout>
+	
+	<SeekBar
+	    android:id="@+id/seekbar_limit_battery"
+	    style="@style/CustomSeekbarSetting" 
+	    android:max="98"/>
+	
+	<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp">
+        
+	    <TextView
+            android:id="@+id/batteryOK"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp"
+            android:text="OK"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:background="@drawable/button_selector"/>
+	    
+         <TextView
+            android:id="@+id/batteryCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+          	android:layout_toLeftOf="@+id/batteryOK"
+          	android:paddingRight="30dp"
+          	android:paddingLeft ="30dp"
+            android:text="CANCEL"
+            android:textColor="@color/white"
+            android:textSize="16sp" 
+            android:gravity="center"
+            android:background="@drawable/button_selector"/>
+         
+         
+         
+         </RelativeLayout>
+</LinearLayout>

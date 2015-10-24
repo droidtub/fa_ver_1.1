@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6ea51d</color>
+    <color name="colorPrimaryDark">#59911e</color>
+    <color name="textColorPrimary">#606ea51d</color>
+    <color name="windowBackground">#262626</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorAccent">#ffffff</color>
+    <color name="text_bottom_color">#FF5722</color>
+    
+    <color name="list_item_title">#fff</color>
+    <color name="list_background">#303030</color>
+    <color name="list_background_normal">#ececec</color>
+    <color name="list_background_pressed">#96d0da</color>
+    <color name="list_divider">#272727</color>
+    <color name="counter_text_bg">#e07e00</color>
+    <color name="counter_text_color">#c5c4c4</color>
+    <color name="background_action_bar">#5d79e4</color>
+    <color name="background_status_bar">#455ec5</color>
+    <color name="background_fragment">#454545</color>
+    
+    <color name="textBlack">#000000</color>
+    <color name="textColor_dialog">#3498db</color>
+    <color name="textStatusColor">#0000ff</color>
+    <color name="view_line_color">#447f8c8d</color>
+    <color name="shadow_color">#80ff0000</color>
+    <color name="header_selected_color">#FF2c3e50</color>
+    <color name="header_color">#FF414B59</color>
+    <color name="white">#ffffff</color>
+    <color name="btn_blue_text_color">#000000</color>
+    <color name="purple">#512DA8</color>
+    <color name="color_ios">#ffecf0f1</color>
+    <color name="ios_dialog_bg">#ffecf0f1</color>
+    <color name="ios_text_blue">#000000</color>
+    <color name="ios_title_bg">#f3f2f2</color>
+    <color name="ios_subtitle_text">#aa4E4E4E</color>
+    <color name="ios_subtitle_bg">#10808080</color>
+    <color name="ios_text_details">#ff7F7F7F</color>
+    <color name="ios_text_red">#ffFF3B30</color>
+    <color name="color_popup_line">#808080</color>
+    <color name="color_select_network_text_press">#ffffff</color>
+    <color name="action_bar_selected">#181c21</color>
+    <color name="color_transparent">#0000</color>
+    <color name="color_network_text_secure">#808080</color>
+
+    <drawable name="text_color_black">#FF000000</drawable>
+
+    <color name="color_network_text_select">#007ad2</color>
+    
+    <color name="tabsScrollColor">#1a57b6</color>
+    <color name="tab_unselected">#2980b9</color>
+    <color name="tab_selected">#3498db</color>
+	
+    <color name="bg_white">#20e62117</color>
+    <color name="bg_white_blur">#fafafa</color>
+    <color name="bg_gray">#90e2e2e2</color>
+     
+    <color name="text_disabled">#afff</color> 
+    <color name="tab_indicator">#FFFF85</color>
+ 
+    <color name="actionbar_selector">#02758b</color>
+    
+    <!--Color for random rainbow -->
+    <color name="bright_pink">#FF007F</color>
+    <color name="red">#FF0000</color>
+    <color name="orange">#FF7F00</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="chartreuse">#7FFF00</color>
+    <color name="green">#00FF00</color>
+    <color name="spring_green">#00FF7F</color>
+    <color name="cyan">#00FFFF</color>
+    <color name="azure">#007FFF</color>
+    <color name="blue">#0000FF</color>
+    <color name="violet">#7F00FF</color>
+    <color name="magenta">#FF00FF</color>
+    
+</resources>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- Layer 0 -->
+    <!-- Layer 1 -->
+    <!-- Layer 2 -->
+    <!-- Layer 3 -->
+    <!-- Layer 4 (content background) -->
+
+
+    <!-- dropshadow -->
+    
+    <item>
+        <shape>
+            <solid android:color="#04000000" />
+
+            <padding android:bottom="1px" />
+        </shape>
+    </item>
+    
+    <item>
+        <shape>
+            <solid android:color="#05000000" />
+
+            <padding android:bottom="1px" />
+        </shape>
+    </item>
+    
+    <item>
+        <shape>
+            <solid android:color="#06000000" />
+
+            <padding android:bottom="1px" />
+        </shape>
+    </item>
+    
+    <item>
+        <shape>
+            <solid android:color="#07000000" />
+
+            <padding android:bottom="1px" />
+        </shape>
+    </item>
+    
+    <item>
+        <shape>
+            <solid android:color="#08000000" />
+
+            <padding android:bottom="1px" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="#09000000" />
+
+            <padding android:bottom="1px" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="#10000000" />
+
+            <padding android:bottom="1px" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="#11000000" />
+
+            <padding android:bottom="1px" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="#12000000" />
+
+            <padding android:bottom="1px" />
+        </shape>
+    </item>
+<!--     <item> -->
+<!--         <shape> -->
+<!--             <solid android:color="#13000000" /> -->
+
+<!--             <padding android:bottom="1px" /> -->
+<!--         </shape> -->
+<!--     </item> -->
+<!--     <item> -->
+<!--         <shape> -->
+<!--             <solid android:color="#14000000" /> -->
+
+<!--             <padding android:bottom="1px" /> -->
+<!--         </shape> -->
+<!--     </item> -->
+    
+<!--     <item> -->
+<!--         <shape> -->
+<!--             <solid android:color="#15000000" /> -->
+
+<!--             <padding android:bottom="1px" /> -->
+<!--         </shape> -->
+<!--     </item> -->
+    
+<!--     <item> -->
+<!--         <shape> -->
+<!--             <solid android:color="#16000000" /> -->
+
+<!--             <padding android:bottom="1px" /> -->
+<!--         </shape> -->
+<!--     </item> -->
+    
+    <!-- content background -->
+<!--     <item> -->
+<!--         <shape> -->
+<!--             <solid android:color="@android:color/transparent" /> -->
+<!--         </shape> -->
+<!--     </item> -->
+
+</layer-list>

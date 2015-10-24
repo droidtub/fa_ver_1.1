@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <shape android:shape="oval">
+            <solid android:color="#FFC400" />
+            <padding 
+                android:bottom="2px" 
+                android:left="2px" 
+                android:right="2px" 
+                android:top="2px" />
+        </shape>      
+    </item> 
+    
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <solid android:color="#90616161" />
+            <padding 
+                android:bottom="2px" 
+                android:left="2px" 
+                android:right="2px" 
+                android:top="2px" />
+        </shape>      
+    </item> 
+    <item >
+	    <layer-list>
+		    <item>
+		        <shape android:shape="oval">
+		            <solid android:color="#FFFFFF" />
+		            <padding 
+		                android:bottom="2px" 
+		                android:left="2px" 
+		                android:right="2px" 
+		                android:top="2px" />
+		        </shape>      
+		    </item> 
+		    <item>
+		        <shape android:shape="oval">
+		            <solid android:color="@color/windowBackground" />
+		            <padding 
+		                android:bottom="2px" 
+		                android:left="2px" 
+		                android:right="2px" 
+		                android:top="2px" />
+		        </shape>      
+		    </item>
+	    </layer-list>
+    </item>
+    
+</selector><!-- From: file:/home/hanh/workspace/Fa.vs.0.11/flashAlert/src/main/res/drawable/power_selector.xml -->

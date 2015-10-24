@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FlashAlert</string>
+    <string name="action_settings">Settings</string>
+	
+	
+	<!-- dialog strings -->
+	<string name="cancel">CANCEL</string>
+	<string name="ok">OK</string>
+	<string name="test_on">TEST ON</string>
+	<string name="flash_times">Flash times</string>
+	<string name="off_length">Off length</string>
+	<string name="on_length">On length</string>
+	<string name="choose_more_apps_title">Choose more apps</string>
+	
+	<string name="flashlight_alert">Flashlight Alert</string>
+	<string name="share">Share</string>
+	<string name="like">Like</string>
+	
+	<!-- setting strings -->
+	<string name="enable_for">Enable for</string>
+	<string name="enable_in">Enable in</string>
+	<string name="setting">Setting</string>
+	<string name="basic_tab">BASIC</string>
+	<string name="advance_tab">ADVANCE</string>
+	<string name="incoming_call">Incoming call</string>
+	<string name="incoming_text">Incoming text</string>
+	<string name="normal_mode">Normal mode</string>
+	<string name="vibrate_mode">Vibrate mode</string>
+	<string name="silent_mode">Silent mode</string>
+	<string name="off_when_battery_below">Off when battery below</string>
+	<string name="battery_threshold">Batterry threshold</string>
+	<string name="notification_for_other_apps">Notification for other apps</string>
+	<string name="choose_more_apps">Choose more apps</string>
+	<string name="do_not_flash_between">Do not flash between</string>
+	<string name="start_time">Start time</string>
+	<string name="end_time">End time</string>
+	
+	<string name="battery_percent_threshold">Battery percent threshold</string>
+	<string name="choose_the_threshold">Choose the threshold</string>
+
+	<!--Admob id-->
+    <string name="bottom_ad_banner_mainscreen">ca-app-pub-6066440988412113/3529605581</string>
+    <string name="bottom_ad_banner_setting_basic_frag">ca-app-pub-6066440988412113/9296937582</string>
+	<string name="bottom_ad_banner_setting_adv_frag">ca-app-pub-6066440988412113/9157336785</string>
+    <string name="bottom_ad_banner_appscreen">ca-app-pub-6066440988412113/1634069989</string>
+
+    <string name="full_ad_enter_appscreen">ca-app-pub-6066440988412113/3749931586</string>
+    <string name="full_ad_enter_setting">ca-app-pub-6066440988412113/8180131184</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/ios_subtitle_bg" android:state_pressed="true"/>
+ <!-- pressed -->
+    <item android:drawable="@color/bg_white" android:state_focused="true"/>
+    <item android:drawable="@color/bg_white" android:state_selected="true"/>
+    <item android:drawable="@color/windowBackground"/>
+ <!-- default -->
+
+</selector><!-- From: file:/home/hanh/workspace/Fa.vs.0.11/flashAlert/src/main/res/drawable/relative_layout_selector.xml -->

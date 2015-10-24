@@ -1,0 +1,8 @@
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#1F000000" >
+	<item android:id="@android:id/mask">
+            <shape android:shape="rectangle">
+                <solid android:color="?android:colorAccent" />
+            </shape>
+        </item>
+</ripple><!-- From: file:/home/hanh/workspace/Fa.vs.0.11/flashAlert/src/main/res/drawable-v21/ripple_list_button.xml -->
