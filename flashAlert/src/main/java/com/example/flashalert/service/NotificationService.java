@@ -54,7 +54,7 @@ public class NotificationService extends NotificationListenerService {
 	@Override
 	public void onNotificationPosted(StatusBarNotification sbn){
 		String packageName = sbn.getPackageName().toString();
-		if(prefs.getBoolean(packageName, false)){
+		if(utils.checkSetup(mContext, "") && prefs.getBoolean(packageName, false)){
             int onTime = prefs.getInt(Properties.PREF_TXT_ON_LENGTH_VALUE, 500);
             int offTime = prefs.getInt(Properties.PREF_TXT_OFF_LENGTH_VALUE, 500);
             int times = prefs.getInt(Properties.PREF_TXT_TIMES_VALUE, 3);
