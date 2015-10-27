@@ -10,6 +10,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.app.TimePickerDialog.OnTimeSetListener;
@@ -211,15 +212,15 @@ public class FragmentSettingCustom extends Fragment implements View.OnClickListe
 			return "0" + String.valueOf(c);
 	}
 
-	
-    class BatteryDialog extends DialogFragment implements OnSeekBarChangeListener, View.OnClickListener{
+    @SuppressLint("all")
+	class BatteryDialog extends DialogFragment implements OnSeekBarChangeListener, View.OnClickListener{
     	
     	private TextView limitBatteryValue;
     	private SeekBar limitBatterySeekbar;
     	private TextView btnOk;
     	private TextView btnCancel;
-    	
-    	
+
+
     	@Override
     	public Dialog onCreateDialog(Bundle bundle){
     		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());

@@ -1949,18 +1949,14 @@ containing a value of this type.
         public static final int ic_vibration_white_36dp=0x7f020053;
         public static final int ic_volume_off_white_36dp=0x7f020054;
         public static final int ic_volume_up_white_36dp=0x7f020055;
-        public static final int icon=0x7f020056;
-        public static final int icon_192=0x7f020057;
-        public static final int icon_96=0x7f020058;
-        public static final int icon_untitled=0x7f020059;
-        public static final int notification_template_icon_bg=0x7f020060;
-        public static final int oval_ripple_button=0x7f02005a;
-        public static final int power_selector=0x7f02005b;
-        public static final int power_switch_icon=0x7f02005c;
-        public static final int relative_layout_selector=0x7f02005d;
-        public static final int ripple_list_button=0x7f02005e;
-        public static final int tab_selector=0x7f02005f;
-        public static final int text_color_black=0x7f020061;
+        public static final int notification_template_icon_bg=0x7f02005c;
+        public static final int oval_ripple_button=0x7f020056;
+        public static final int power_selector=0x7f020057;
+        public static final int power_switch_icon=0x7f020058;
+        public static final int relative_layout_selector=0x7f020059;
+        public static final int ripple_list_button=0x7f02005a;
+        public static final int tab_selector=0x7f02005b;
+        public static final int text_color_black=0x7f02005d;
     }
     public static final class id {
         public static final int action0=0x7f0b00a7;
