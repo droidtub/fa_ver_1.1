@@ -186,9 +186,9 @@ public class FragmentSettingNormal extends Fragment implements View.OnClickListe
         silentMode.setOnClickListener(this);
 
 
-        AdView mBottomAddViewSettingBasic = (AdView)v.findViewById(R.id.bottom_ad_banner_setting_basic);
+        /*AdView mBottomAddViewSettingBasic = (AdView)v.findViewById(R.id.bottom_ad_banner_setting_basic);
         AdRequest adRequest = new AdRequest.Builder().build();
-        mBottomAddViewSettingBasic.loadAd(adRequest);
+        mBottomAddViewSettingBasic.loadAd(adRequest);*/
 
         return v;
     }

@@ -111,7 +111,7 @@
 
         </RelativeLayout>
 
-        <com.google.android.gms.ads.AdView
+        <!--<com.google.android.gms.ads.AdView
             android:id="@+id/bottom_ad_banner_app"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -119,13 +119,13 @@
             android:layout_above="@+id/bottom_bar_container"
             ads:adSize="BANNER"
             ads:adUnitId="@string/bottom_ad_banner_appscreen">
-        </com.google.android.gms.ads.AdView>
+        </com.google.android.gms.ads.AdView>-->
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/app_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@+id/bottom_ad_banner_app"
+            android:layout_above="@+id/bottom_bar_container"
             android:background="@drawable/relative_layout_selector"
             />
     </RelativeLayout>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">FlashAlert</string>
+    <string name="app_name">Flash Notification</string>
     <string name="action_settings">Settings</string>
 	
 	
@@ -14,7 +14,7 @@
 	<string name="on_length">On length</string>
 	<string name="choose_more_apps_title">Choose more apps</string>
 	
-	<string name="flashlight_alert">Flashlight Alert</string>
+	<string name="flashlight_alert">Flashlight Notification</string>
 	<string name="share">Share</string>
 	<string name="like">Like</string>
 	

@@ -30,14 +30,14 @@
 
 
 
-    <com.google.android.gms.ads.AdView
+    <!--<com.google.android.gms.ads.AdView
         android:id="@+id/bottom_ad_banner_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         ads:adSize="BANNER"
         ads:adUnitId="@string/bottom_ad_banner_mainscreen">
-    </com.google.android.gms.ads.AdView>
+    </com.google.android.gms.ads.AdView>-->
 
     <FrameLayout
         android:id="@+id/bottom_container"

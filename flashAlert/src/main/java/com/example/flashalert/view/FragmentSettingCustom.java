@@ -119,9 +119,9 @@ public class FragmentSettingCustom extends Fragment implements View.OnClickListe
         battery.setOnClickListener(this);
         setTime.setOnClickListener(this);
 
-		AdView mBottomAddViewSettingAdv = (AdView)v.findViewById(R.id.bottom_ad_banner_setting_adv);
+		/*AdView mBottomAddViewSettingAdv = (AdView)v.findViewById(R.id.bottom_ad_banner_setting_adv);
 		AdRequest adRequest = new AdRequest.Builder().build();
-		mBottomAddViewSettingAdv.loadAd(adRequest);
+		mBottomAddViewSettingAdv.loadAd(adRequest);*/
 
 		//mInterstitialAd = new InterstitialAd(this.getActivity());
 		//mInterstitialAd.setAdUnitId("ca-app-pub-6066440988412113/3749931586");

@@ -380,7 +380,7 @@
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="advance_tab">ADVANCE</string>
-    <string name="app_name">FlashAlert</string>
+    <string name="app_name">Flash Notification</string>
     <!-- From: file:/home/hanh/workspace/Fa.vs.0.11/flashAlert/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/res/values/auth_strings.xml -->
     <eat-comment/>
     <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
@@ -445,7 +445,7 @@
     <string name="enable_in">Enable in</string>
     <string name="end_time">End time</string>
     <string name="flash_times">Flash times</string>
-    <string name="flashlight_alert">Flashlight Alert</string>
+    <string name="flashlight_alert">Flashlight Notification</string>
     <string name="full_ad_enter_appscreen">ca-app-pub-6066440988412113/3749931586</string>
     <string name="full_ad_enter_setting">ca-app-pub-6066440988412113/8180131184</string>
     <string name="incoming_call">Incoming call</string>

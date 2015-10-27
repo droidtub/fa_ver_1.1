@@ -89,9 +89,9 @@ public class MainView implements View.OnClickListener{
         setting.setCompoundDrawables(null, drawable, null, null);
         setting.setOnClickListener(this);
 
-		AdView mBottomAddViewHome = (AdView)mActivity.findViewById(R.id.bottom_ad_banner_main);
+		/*AdView mBottomAddViewHome = (AdView)mActivity.findViewById(R.id.bottom_ad_banner_main);
 		AdRequest adRequest = new AdRequest.Builder().build();
-		mBottomAddViewHome.loadAd(adRequest);
+		mBottomAddViewHome.loadAd(adRequest);*/
 
 
 

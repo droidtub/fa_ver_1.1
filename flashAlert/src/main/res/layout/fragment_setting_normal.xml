@@ -139,7 +139,7 @@
         </LinearLayout>
     </ScrollView>
 
-    <com.google.android.gms.ads.AdView
+    <!--<com.google.android.gms.ads.AdView
         android:id="@+id/bottom_ad_banner_setting_basic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -147,6 +147,6 @@
         android:layout_alignParentBottom="true"
         ads:adSize="BANNER"
         ads:adUnitId="@string/bottom_ad_banner_setting_adv_frag">
-    </com.google.android.gms.ads.AdView>
+    </com.google.android.gms.ads.AdView>-->
 
 </RelativeLayout>

@@ -118,12 +118,12 @@ public class AppActivity extends AppCompatActivity implements View.OnClickListen
             this.getWindow().setNavigationBarColor(getResources().getColor(R.color.colorPrimary));
         }
 
-        AdView mBottomAddViewApp = (AdView)findViewById(R.id.bottom_ad_banner_app);
+        /*AdView mBottomAddViewApp = (AdView)findViewById(R.id.bottom_ad_banner_app);
         AdRequest adRequest = new AdRequest.Builder().build();
-        mBottomAddViewApp.loadAd(adRequest);
+        mBottomAddViewApp.loadAd(adRequest);*/
 
 
-        mInterstitialAd = new InterstitialAd(this);
+        /*mInterstitialAd = new InterstitialAd(this);
         mInterstitialAd.setAdUnitId(this.getResources().getString(R.string.full_ad_enter_appscreen));
         requestNewInterstitial();
 
@@ -136,7 +136,7 @@ public class AppActivity extends AppCompatActivity implements View.OnClickListen
             }
 
 
-        });
+        });*/
 
     }
 
@@ -278,14 +278,14 @@ public class AppActivity extends AppCompatActivity implements View.OnClickListen
         return true;
     }
 
-    private void requestNewInterstitial() {
+    /*private void requestNewInterstitial() {
         AdRequest adRequest = new AdRequest.Builder()
                 .addTestDevice("SEE_YOUR_LOGCAT_TO_GET_YOUR_DEVICE_ID")
                 .build();
 
         mInterstitialAd.loadAd(adRequest);
 
-    }
+    }*/
 
 }
 
