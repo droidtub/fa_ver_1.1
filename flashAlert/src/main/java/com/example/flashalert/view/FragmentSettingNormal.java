@@ -4,8 +4,8 @@ package com.example.flashalert.view;
 import com.droidtub.flashalert.R;
 import com.example.flashalert.utils.CommonUtils;
 import com.example.flashalert.utils.Properties;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
+/*import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;*/
 
 import android.content.Context;
 import android.content.DialogInterface;

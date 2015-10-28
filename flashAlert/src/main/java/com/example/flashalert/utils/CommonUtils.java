@@ -21,9 +21,8 @@ public class CommonUtils {
 
 	private SharedPreferences prefs;
 	private boolean enable = true;
-	private boolean isFlashOn;
-	private static Camera cam;
-	private static Camera.Parameters params;
+	private Camera cam;
+	private Camera.Parameters params;
 
 	public static boolean hasKitKat() {
 		return Build.VERSION.SDK_INT >= VERSION_CODES.KITKAT;
@@ -51,31 +50,36 @@ public class CommonUtils {
 
 			@Override
 			public void run() {
-				getCamera();
+				try {
+					releaseCameraAndPreview();
+					cam = Camera.open();
+					params = cam.getParameters();
+					cam.startPreview();
+				} catch (Exception e) {
+					Log.e("CallService", e.toString());
+				}
 
 				for (int i = 0; i < count; i++) {
 					if (!enable) {
 						break;
 					}
 					try {
-						//flipFlash(cam, params, false);
-						turnOnFlash();
+						flipFlash(cam, params, false);
 					} catch (Exception e) {
 						// TODO: handle exception
 					}
-					
+
 					try {
 						Thread.sleep(onLength);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
 					try {
-						//flipFlash(cam, params, true);
-						turnOffFlash();
+						flipFlash(cam, params, true);
 					} catch (Exception e) {
-				
+						// TODO: handle exception
 					}
-					
+
 					try {
 						Thread.sleep(offLength);
 					} catch (InterruptedException e) {
@@ -105,46 +109,12 @@ public class CommonUtils {
 			flashIsOn = true;
 		}
 	}
-	
-	private static Camera getCamera() {
-	    if (cam != null) {
-	    	cam.release();
-	    	cam = null;
-	    }
-	    
-		try{
-			cam = Camera.open(Camera.CameraInfo.CAMERA_FACING_BACK);
 
-			params = cam.getParameters();
-			//cam.startPreview();
-		}catch(Exception e){
-			Log.e("CallService", e.toString());
+	private void releaseCameraAndPreview() {
+		if (cam != null) {
+			cam.release();
+			cam = null;
 		}
-		return cam;
-		
-	}
-	
-	private void turnOnFlash(){	
-		if (cam == null || params == null) {
-			return;
-		}		
-		params = cam.getParameters();
-		params.setFlashMode(Parameters.FLASH_MODE_TORCH);
-		cam.setParameters(params);
-		cam.startPreview();
-					
-	}
-	
-	private void turnOffFlash() {
-	
-		if (cam == null || params == null) {
-			return;
-		}
-		
-		params = cam.getParameters();
-		params.setFlashMode(Parameters.FLASH_MODE_OFF);
-		cam.setParameters(params);
-		cam.startPreview();
 	}
 
 	public boolean checkSetup(Context context, String type) {
@@ -188,45 +158,55 @@ public class CommonUtils {
 				return false;
 			}
 		}
-		
+
 		if (valueHourTurnOn) {
 
 			Calendar cal = Calendar.getInstance();
 			int current_minute = cal.get(Calendar.MINUTE);
-	        //12 hour format
+			//12 hour format
 			int current_hour_12 = cal.get(Calendar.HOUR);
-	        //24 hour format
+			//24 hour format
 			int current_hour_24 = cal.get(Calendar.HOUR_OF_DAY);
-			
+
 			String startTime = hourOn + ":" + minuteOn;
-		    String endTime = hourOff + ":" + minuteOff;
-		    String nowTime = current_hour_24 + ":" + current_minute;
-		    Log.e("CallService", "date:" + startTime + "  " + endTime + "  " + nowTime);
-		    try {
-		        Date endDate =  new SimpleDateFormat("HH:mm").parse(endTime);
-		        Date startDate = new SimpleDateFormat("HH:mm").parse(startTime);
-		        Date nowDate =  new SimpleDateFormat("HH:mm").parse(nowTime);
-		        if (hourOn <= hourOff) {
-			        if (nowDate.after(startDate) && nowDate.before(endDate)) {
-			        	Log.e("CallService", "date in");
-			        } else {
-			        	Log.e("CallService", "date out");
-			            return false;
-			        }
-		        } else {
-		        	if (nowDate.before(startDate) && nowDate.after(endDate)) {
-			        	Log.e("CallService", "date in");
-			        	return false;
-			        } else {
-			        	Log.e("CallService", "date out");
-			        }
-		        }
-		    } catch (ParseException e) {
-		        e.printStackTrace();
-		    }
+			String endTime = hourOff + ":" + minuteOff;
+			String nowTime = current_hour_24 + ":" + current_minute;
+			Log.e("CallService", "date:" + startTime + "  " + endTime + "  " + nowTime);
+			try {
+				Date endDate =  new SimpleDateFormat("HH:mm").parse(endTime);
+				Date startDate = new SimpleDateFormat("HH:mm").parse(startTime);
+				Date nowDate =  new SimpleDateFormat("HH:mm").parse(nowTime);
+				if (hourOn <= hourOff) {
+					if (nowDate.after(startDate) && nowDate.before(endDate)) {
+						Log.e("CallService", "date in");
+					} else {
+						Log.e("CallService", "date out");
+						return false;
+					}
+				} else {
+					if (nowDate.before(startDate) && nowDate.after(endDate)) {
+						Log.e("CallService", "date in");
+						return false;
+					} else {
+						Log.e("CallService", "date out");
+					}
+				}
+			} catch (ParseException e) {
+				e.printStackTrace();
+			}
 		}
 
 		return true;
+	}
+
+	public static void setSwitchChangeColor(SwitchCompat sw) {
+		if (sw.isChecked()) {
+			sw.getThumbDrawable().setColorFilter(Color.parseColor("#6ea51d"), Mode.MULTIPLY);
+			sw.getTrackDrawable().setColorFilter(Color.parseColor("#806ea51d"), Mode.MULTIPLY);
+		} else {
+			sw.getThumbDrawable().setColorFilter(Color.parseColor("#8f8e8e"), Mode.MULTIPLY);
+			sw.getTrackDrawable().setColorFilter(Color.parseColor("#608f8e8e"), Mode.MULTIPLY);
+		}
 	}
 
 	

@@ -5,10 +5,10 @@ import com.droidtub.flashalert.R;
 import com.example.flashalert.activity.AppActivity;
 import com.example.flashalert.utils.CommonUtils;
 import com.example.flashalert.utils.Properties;
-import com.google.android.gms.ads.AdListener;
+/*import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.InterstitialAd;*/
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;

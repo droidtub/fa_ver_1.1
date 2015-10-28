@@ -25,17 +25,18 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.droidtub.flashalert.R;
 import com.example.flashalert.adapter.AppAdapter;
 import com.example.flashalert.model.AppInfo;
 import com.example.flashalert.service.NotificationService;
 import com.example.flashalert.utils.Properties;
-import com.example.flashalert.view.AppDialog;
+/*import com.example.flashalert.view.AppDialog;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.InterstitialAd;*/
 import com.pnikosis.materialishprogress.ProgressWheel;
 
 import java.security.KeyStore;
@@ -61,7 +62,7 @@ public class AppActivity extends AppCompatActivity implements View.OnClickListen
     private SharedPreferences toShared;
     private SwitchCompat appSwitch;
     private ImageView backBtn;
-    InterstitialAd mInterstitialAd;
+    //InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -73,8 +74,13 @@ public class AppActivity extends AppCompatActivity implements View.OnClickListen
         appSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                Intent i = new Intent("android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS");
-                startActivityForResult(i, 0);
+                if(Build.VERSION.SDK_INT > 18) {
+                    Intent i = new Intent("android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS");
+                    startActivityForResult(i, 0);
+                }
+                else {
+                    Toast.makeText(AppActivity.this, "Alert for Notification of App is allowed for Android version >= 4.3", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
