@@ -211,21 +211,21 @@ ADDED from AndroidManifest.xml:118:17
 	android:name
 		ADDED from AndroidManifest.xml:118:25
 service#com.example.flashalert.service.CallService
-ADDED from AndroidManifest.xml:122:9
+ADDED from AndroidManifest.xml:123:9
 	android:name
-		ADDED from AndroidManifest.xml:122:18
+		ADDED from AndroidManifest.xml:123:18
 service#com.example.flashalert.service.NotificationService
-ADDED from AndroidManifest.xml:124:9
+ADDED from AndroidManifest.xml:125:9
 	android:permission
-		ADDED from AndroidManifest.xml:126:13
+		ADDED from AndroidManifest.xml:127:13
 	android:name
-		ADDED from AndroidManifest.xml:124:18
+		ADDED from AndroidManifest.xml:125:18
 intent-filter#android.service.notification.NotificationListenerService
-ADDED from AndroidManifest.xml:127:13
+ADDED from AndroidManifest.xml:128:13
 action#android.service.notification.NotificationListenerService
-ADDED from AndroidManifest.xml:128:17
+ADDED from AndroidManifest.xml:129:17
 	android:name
-		ADDED from AndroidManifest.xml:128:25
+		ADDED from AndroidManifest.xml:129:25
 uses-permission#android.permission.INTERNET
 ADDED from com.google.android.gms:play-services-ads:8.1.0:20:5
 	android:name

@@ -59,7 +59,7 @@ public class FragmentSettingCustom extends Fragment implements View.OnClickListe
 	private SharedPreferences pref;
 	private static SharedPreferences.Editor editor;
 	private BatteryDialog mBatteryDialog;
-	private AppDialog mAppDialog;
+
 	private int batteryValue;
 	
     private static final int START_TIME_PICKER_ID = 1;
@@ -181,11 +181,7 @@ public class FragmentSettingCustom extends Fragment implements View.OnClickListe
 		mBatteryDialog.show(manager, null);
 		
 	}
-	
-	private void showAppDialog(FragmentManager manager){
-		mAppDialog = new AppDialog();
-		mAppDialog.show(manager, null);
-	}
+
 
 	@Override
 	public void onTimeSet(int id, TimePicker view, int hourOfDay, int minute) {

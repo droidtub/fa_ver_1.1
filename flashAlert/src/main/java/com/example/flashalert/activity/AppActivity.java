@@ -74,13 +74,13 @@ public class AppActivity extends AppCompatActivity implements View.OnClickListen
         appSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(Build.VERSION.SDK_INT > 18) {
-                    Intent i = new Intent("android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS");
-                    startActivityForResult(i, 0);
-                }
-                else {
-                    Toast.makeText(AppActivity.this, "Alert for Notification of App is allowed for Android version >= 4.3", Toast.LENGTH_SHORT).show();
-                }
+            if(Build.VERSION.SDK_INT >= 18) {
+                Intent i = new Intent("android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS");
+                startActivityForResult(i, 0);
+            }
+            else {
+                Toast.makeText(AppActivity.this, "Only supported for Android Version 4.3 up", Toast.LENGTH_SHORT).show();
+            }
             }
         });
 

@@ -13,10 +13,12 @@ import android.content.SharedPreferences;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SwitchCompat;
 import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
@@ -62,27 +64,27 @@ public class AppAdapter extends RecyclerView.Adapter<AppAdapter.AppViewHolder> {
 
 		holder.checkbox.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
-			@Override
-			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-				// TODO Auto-generated method stub
-				if(buttonView.isPressed()){
-					editor.putBoolean(item.getPackageName(), isChecked);
-					editor.commit();
-				}
-			}
-		});
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (buttonView.isPressed()) {
+                    editor.putBoolean(item.getPackageName(), isChecked);
+                    editor.commit();
+
+                }
+            }
+        });
 
 		holder.checkbox.setOnClickListener(new OnClickListener() {
 
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				boolean mValue = !prefs.getBoolean(item.getName(), false);
-				holder.checkbox.setChecked(mValue);
-				editor.putBoolean(item.getPackageName(), mValue);
-				editor.commit();
-			}
-		});
+            @Override
+            public void onClick(View v) {
+                    boolean mValue = !prefs.getBoolean(item.getPackageName(), false);
+                    holder.checkbox.setChecked(mValue);
+                    editor.putBoolean(item.getPackageName(), mValue);
+                    editor.commit();
+
+            }
+        });
 	}
 
 	@Override
@@ -95,14 +97,14 @@ public class AppAdapter extends RecyclerView.Adapter<AppAdapter.AppViewHolder> {
 	class AppViewHolder extends RecyclerView.ViewHolder{
 		ImageView icon;
 		TextView title;
-		SwitchCompat checkbox;
+		CheckBox checkbox;
 
 		public AppViewHolder(View itemView) {
 			super(itemView);
 			// TODO Auto-generated constructor stub
 			icon = (ImageView)itemView.findViewById(R.id.app_icon);
 			title = (TextView)itemView.findViewById(R.id.app_title);
-			checkbox = (SwitchCompat)itemView.findViewById(R.id.app_checkbox);
+			checkbox = (CheckBox)itemView.findViewById(R.id.app_checkbox);
 		}
 
 	}
@@ -111,7 +113,7 @@ public class AppAdapter extends RecyclerView.Adapter<AppAdapter.AppViewHolder> {
 	public void handleClick(View view, int position){
 		AppInfo item = appList.get(position);
 		boolean mValue = !prefs.getBoolean(item.getPackageName(), false);
-		SwitchCompat mCheckbox = (SwitchCompat)view.findViewById(R.id.app_checkbox);
+		CheckBox mCheckbox = (CheckBox)view.findViewById(R.id.app_checkbox);
 		mCheckbox.setChecked(mValue);
 		editor.putBoolean(item.getPackageName(), mValue);
 		editor.commit();
